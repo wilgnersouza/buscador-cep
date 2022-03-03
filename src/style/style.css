@@ -1,0 +1,86 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#2b3041, #31416e);
+}
+.title{
+    font-size: 85px;
+    color: rgb(255, 255, 255);
+    animation: flipTitle 2s;
+}
+.container-input{
+    background-color: rgba(255,255,255, 0.5);
+    padding: 15px;
+    margin: 34px 0;
+    display: flex;  /*ficar um do lado do outro*/
+    border-radius: 8px;
+    box-shadow: 1px 3px 8px rgba(15, 12, 12, 0.9);
+}
+.container-input input{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    outline: none;
+    margin-right: 15px;
+}
+.acao{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.acao:hover{
+    transform: scale(1.2);
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    width: 400px;
+    border-radius: 8px;
+}
+.main h2{
+    margin: 15px 0;
+    font-size: 35px;
+}
+.main span{
+    margin-bottom: 15px;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 620px) {
+    .title{
+        font-size: 50px;
+    }
+    .main h2{
+        font-size: 28px;
+    }
+    .main{
+        width: 60%;
+        min-height: 250px;
+    }
+    .container-input{
+        padding: 9px;
+    }
+}
+
+
+
+
+@keyframes flipTitle{
+    from{
+        transform: rotateX(90deg);
+    }
+    to{
+        transform: rotateX(0deg);
+    }
+}
